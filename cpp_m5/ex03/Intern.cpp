@@ -6,7 +6,7 @@
 /*   By: fhihi <fhihi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 19:22:38 by fhihi             #+#    #+#             */
-/*   Updated: 2023/09/15 20:42:54 by fhihi            ###   ########.fr       */
+/*   Updated: 2023/10/03 17:51:18 by fhihi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,12 @@ Form* Intern::RobotomyRequestFormInstance(std::string target) {
 	return new ShrubberyCreationForm(target);
 }
 
-
 Form*	Intern::makeForm(std::string formName, std::string target) {
+	Form* form;
 	std::string names[] = { "presidential pardon", "robotomy request", "shrubbery creation" };
 	Form* (Intern::*funcPTR[])(std::string target) = { &Intern::PresidentialPardonFormInstance,
 														&Intern::RobotomyRequestFormInstance, 
 														&Intern::ShrubberyCreationFormInstance };
-	Form* form;
 
 	for (int i = 0; i < 3; i++) {
 		if (names[i] == formName) {

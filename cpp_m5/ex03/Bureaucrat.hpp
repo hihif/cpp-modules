@@ -6,7 +6,7 @@
 /*   By: fhihi <fhihi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/02 11:21:00 by fhihi             #+#    #+#             */
-/*   Updated: 2023/09/15 20:38:25 by fhihi            ###   ########.fr       */
+/*   Updated: 2023/10/03 17:52:02 by fhihi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include<iostream>
 #include"AForm.hpp"
+
 class Form;
 
 class Bureaucrat

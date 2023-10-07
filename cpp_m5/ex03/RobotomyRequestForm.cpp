@@ -6,7 +6,7 @@
 /*   By: fhihi <fhihi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:26:14 by fhihi             #+#    #+#             */
-/*   Updated: 2023/09/15 20:39:40 by fhihi            ###   ########.fr       */
+/*   Updated: 2023/09/18 13:39:23 by fhihi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& o
 }
 
 RobotomyRequestForm::~RobotomyRequestForm() {
-	
 }
 
 void	RobotomyRequestForm::execute(Bureaucrat const & executor) const {
