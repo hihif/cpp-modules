@@ -6,7 +6,7 @@
 /*   By: fhihi <fhihi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 13:28:24 by fhihi             #+#    #+#             */
-/*   Updated: 2023/08/15 15:41:21 by fhihi            ###   ########.fr       */
+/*   Updated: 2023/10/12 09:53:40 by fhihi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,6 @@ Fixed&	Fixed::operator--() {
 
 Fixed Fixed::operator++(int) {
 	Fixed tmp(*this);
-
 	this->x++;
 	return (tmp);
 }

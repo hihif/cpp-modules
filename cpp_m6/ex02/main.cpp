@@ -6,7 +6,7 @@
 /*   By: fhihi <fhihi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 16:20:10 by fhihi             #+#    #+#             */
-/*   Updated: 2023/09/26 16:46:31 by fhihi            ###   ########.fr       */
+/*   Updated: 2023/10/11 15:23:23 by fhihi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class C : public Base {};
 Base* generate() {
 	srand(time(NULL));
     int randomValue = (rand() % 3);
-	printf ("%d\n", randomValue);
     switch (randomValue) {
         case 0:
             return new A();

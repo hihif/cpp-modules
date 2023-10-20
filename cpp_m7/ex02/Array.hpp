@@ -6,7 +6,7 @@
 /*   By: fhihi <fhihi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 18:00:49 by fhihi             #+#    #+#             */
-/*   Updated: 2023/10/05 17:35:36 by fhihi            ###   ########.fr       */
+/*   Updated: 2023/10/11 12:03:15 by fhihi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ Array<T>::Array() : arr(NULL), size_(0) {
 
 template <typename T>
 Array<T>::Array(int n) : size_(n) {
-	// if (n < 0)
-	// 	throw std::invalid_argument();
+	if (n < 0)
+		throw std::out_of_range("size of array should be positive");
 	arr = new T[n];
 }
 

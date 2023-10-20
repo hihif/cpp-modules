@@ -6,15 +6,18 @@
 /*   By: fhihi <fhihi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 17:01:19 by fhihi             #+#    #+#             */
-/*   Updated: 2023/09/27 15:23:16 by fhihi            ###   ########.fr       */
+/*   Updated: 2023/10/11 15:16:02 by fhihi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<iostream>
+#include "ScalarConverter.hpp"
 
-int main () {
-	std::string str = "-+332.3a";
-	char *s = &str[0];
-	float r = strtof(s, NULL);
-	std::cout << r << std::endl;
+int main (int ac, char *av[]) {
+	ScalarConverter con;
+
+	if (ac != 2)
+		return (1);
+	con.convert(av[1]);
+	return (0);
 }
