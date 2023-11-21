@@ -5,29 +5,35 @@
 #                                                     +:+ +:+         +:+      #
 #    By: fhihi <fhihi@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/10/11 11:31:40 by fhihi             #+#    #+#              #
-#    Updated: 2023/10/21 09:51:51 by fhihi            ###   ########.fr        #
+#    Created: 2023/10/31 18:35:52 by fhihi             #+#    #+#              #
+#    Updated: 2023/11/21 11:28:23 by fhihi            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = btc
+NAME = PmergeMe
 
-# FLAGS = -Wall -Wextra -Werror #-std=c++98 
+FLAGS = -Wall -Wextra -Werror -std=c++98 
 
 RM = rm -f
 
 CC = c++
 
-SRC = main.cpp BitcoinExchange.cpp
+SRC = main.cpp PmergeMe.cpp list.cpp vec.cpp
 
-ICL = BitcoinExchange.hpp
+OBJ = $(SRC:.cpp=.o)
 
-$(NAME): $(SRC) $(ICL)
-	@ $(CC) $(FLAGS) $(SRC) -o $@
+ICL = PmergeMe.hpp list.hpp vec.hpp
+
+%.o: %.c
+	@ c++ $(CFLAGS) -c $< -o $@ 
+
+$(NAME): $(OBJ) $(ICL)
+	@ $(CC) $(OBJ) -o $@
 
 all: $(NAME)
 
 clean:
+	@ $(RM) $(OBJ)
 
 fclean: clean
 	@ $(RM) $(NAME)
